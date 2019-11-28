@@ -1,4 +1,4 @@
-# Type System# Type System
+# Type System
 
 Structural / Nominal
 
