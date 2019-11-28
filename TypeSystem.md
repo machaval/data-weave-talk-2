@@ -1,6 +1,6 @@
 # Type System
 
-Structural / Nominal
+
 
 # Types
 
@@ -12,6 +12,14 @@ Structural / Nominal
 - Object
 - Regex
 - Namespace
+
+# Kind
+
+Structural / Nominal
+
+# Properties
+
+Soudness / completeness
 
 # Type Parameters
 
