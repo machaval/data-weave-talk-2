@@ -1,4 +1,4 @@
-# Type System# Type System
+# Type System
 
 Structural / Nominal
 
@@ -77,9 +77,11 @@ Iterator vs Array (Random access vs Sequencial)
 
 # Materialization Rule
 
-```
-A Variable needs to be materialized if it is referenced more than once or being referenced inside a lambda (different scope)
-```
+
+A Variable needs to be materialized if 
+   * it is referenced more than once 
+   * being referenced inside a lambda (different scope)
+
 
 # Streaming
 It is never materialize
