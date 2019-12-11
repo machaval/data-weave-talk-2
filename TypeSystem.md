@@ -1,50 +1,82 @@
 # Type System
 
-
-
-# Types
-
-- String
-- Boolean
-- Number
-- Array
-- Dates
-- Object
-- Regex
-- Namespace
-
 # Kind
 
 Structural / Nominal
 
 # Properties
 
-Soudness / completeness
+Soundness / Completeness
 
-# Type Parameters
+# Basic Types
+
+- String
+- Boolean
+- Number
+- Object
+- Array
+- Dates
+- Regex
+- Namespace
+
+# Algebraic Data Types
+
+- Union Types: e.g String | Number
+- Intersection Types: e.g {name: String} & {age: Number}
+
+# Type Parameters (PlaceHolders)
 
 ```
-fun map<T,Q>(a: Array<T>, callback:(T) -> Q) : Array<Q> = ???
+fun map<T, Q>(a: Array<T>, callback:(T) -> Q) : Array<Q> = ???
 ---
 [1] map ((item: Number): Boolean -> item == 0)
 ```
-## Constrains
+
+# Type Parameters 
+
+Top Types
 
 ```
-Array<Number> => Array<T>
-```
-```
-(Number) -> Boolean => (T) -> Q
+fun addAge<T <: {name: String}>(a: T): T & {age:Number} = ???
 ```
 
-# Build the ecuations
+# Type Parameter resolution
+
+```
+fun map<T, Q>(a: Array<T>, callback:(T) -> Q) : Array<Q> = ???
+---
+[1] map ((item: Number): Boolean -> item == 0)
+```
+
+# Calculate Constrains
+
+```
+Array<T> <= Array<Number>
+```
+```
+(T) -> Q <= (Number) -> Boolean
+```
+
+# Build the Ecuations
 
 ```
 T <= Number
 Number <= T
 Q <= Boolean
 ```
-# Resolve the ecuation by substitution
+# Resolve the Ecuation using Substitution
+
+```
+T = Number
+```
+
+```
+Number <= T
+Q <= Boolean
+```
+
+# Resolve the Ecuation using Substitution
+
 ```
 T = Number
 ```
@@ -52,6 +84,40 @@ T = Number
 ```
 Number <= Number
 Q <= Boolean
+```
+
+# Resolve the Ecuation using Substitution
+
+```
+T <= Number
+```
+
+```
+Q <= Boolean
+```
+
+# Resolve the Ecuation using Substitution
+
+```
+T = Number
+Q <= Boolean
+```
+
+# Use Solution On Return Type
+
+```
+T = Number
+Q <= Boolean
+```
+
+```
+Array<Q>
+```
+
+# Use Solution On Return Type
+
+```
+Array<Boolean>
 ```
 
 # Explicit vs Infered
@@ -64,6 +130,10 @@ var a: String = "123"
 var a = "123"
 ```
 
+# Global Type Inference
+
+Data Flow Graph
+
 # Links
 
 * https://github.com/igstan/itake-2015
@@ -72,52 +142,7 @@ var a = "123"
 * https://crystal-lang.org/2014/12/06/another-language.html
 * http://web.cs.ucla.edu/~palsberg/course/cs239/reading/wand87.pdf
 
-# Static Analysis Optimizations
 
-* Materialization / Streaming [Wiki](https://en.wikipedia.org/wiki/Random_access)
-* Common sube expression elimination [Wiki](https://en.wikipedia.org/wiki/Common_subexpression_elimination)
-* Tail Recursive [Wiki](https://en.wikipedia.org/wiki/Tail_call)
-* Frame inlinening
-
-# Materialization / Streaming
-
-Iterator vs Array (Random access vs Sequencial)
-
-# Materialization Rule
-
-
-A Variable needs to be materialized if 
-   * it is referenced more than once 
-   * being referenced inside a lambda (different scope)
-
-
-# Streaming
-It is never materialize
-
-# Common Sube Expression Elmimination
-
-Referencial Transparency
-
-```
-{
-   a: payload.a.b ,
-   b: payload.a.b.c,
-   d: payload.a.b
-}
-```
-
-```
-do {
-    var fakeVar1= payload.a.b
-    var fakeVar2= pfakeVar1.c
-    ---
-    {
-       a: fakeVar1,
-       b: fakeVar2,
-       d: fakeVar2.d
-    }
-}
-```
 
 
 

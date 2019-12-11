@@ -1,6 +1,9 @@
+```
+dw "output application/json --- 1 to 100000000000 map {id: \$ }" 
+```
 
 ```
-./dw "1 to 100000000000 map {id: \$ }" | ./dw "input payload application/json --- payload map (item) -> isEven(item.id)" 
+dw "output application/json --- 1 to 100000000000 map {id: \$ }" | dw "input payload application/json --- payload map (item) -> isEven(item.id)" 
 ```
 -----------
  Stream capable
