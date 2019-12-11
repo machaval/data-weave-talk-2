@@ -9,10 +9,10 @@ Text => AST
 
 # PEG
 
-- All In one. Simpler but slower (Parbolied2)
+- All In one. Simpler but slower (Parboiled2)
 
 
-# Cannonical AST
+# Canonical AST
 
 - Merge Overloaded Function
 - Implicit Functions
@@ -23,8 +23,8 @@ Text => AST
 
 # Scope Phase
 
-- Visibility and Accessiblity
+- Visibility and Accessibility
 
-# Type Checking 
+# Type Checking
 
 - Run Type Checking

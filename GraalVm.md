@@ -19,7 +19,7 @@ interface JVMCICompiler {
 # Graal Compiler
 
 - Written in Java
-- Very good scape analisis
+- Very good escape analisis
 - Especulative optimization (Code inlining)
 
 
@@ -31,7 +31,7 @@ Framework to build new languages using AST Interpreters
 - Ruby
 - JavaScript
 - Sulong (BitCode interpreter)
-- Smalltak
+- Smalltalk
 
 # AOT
 
