@@ -8,7 +8,7 @@
 
 # Dynamic Dispatching
 
-- Cache target and dispaching
+- Cache target and dispatching
 
 # Value Selection
 
@@ -17,4 +17,3 @@
 # Value Selection
 
 - Index selection
-

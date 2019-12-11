@@ -48,7 +48,7 @@ fun map<T, Q>(a: Array<T>, callback:(T) -> Q) : Array<Q> = ???
 [1] map ((item: Number): Boolean -> item == 0)
 ```
 
-# Calculate Constrains
+# Calculate Constraints
 
 ```
 Array<T> <= Array<Number>
@@ -57,14 +57,14 @@ Array<T> <= Array<Number>
 (T) -> Q <= (Number) -> Boolean
 ```
 
-# Build the Ecuations
+# Build the Equations
 
 ```
 T <= Number
 Number <= T
 Q <= Boolean
 ```
-# Resolve the Ecuation using Substitution
+# Resolve the Equation using Substitution
 
 ```
 T = Number
@@ -75,7 +75,7 @@ Number <= T
 Q <= Boolean
 ```
 
-# Resolve the Ecuation using Substitution
+# Resolve the Equation using Substitution
 
 ```
 T = Number
@@ -86,7 +86,7 @@ Number <= Number
 Q <= Boolean
 ```
 
-# Resolve the Ecuation using Substitution
+# Resolve the Equation using Substitution
 
 ```
 T <= Number
@@ -96,7 +96,7 @@ T <= Number
 Q <= Boolean
 ```
 
-# Resolve the Ecuation using Substitution
+# Resolve the Equation using Substitution
 
 ```
 T = Number
@@ -120,7 +120,7 @@ Array<Q>
 Array<Boolean>
 ```
 
-# Explicit vs Infered
+# Explicit vs Inferred
 
 ```
 var a: String = "123"
@@ -141,8 +141,3 @@ Data Flow Graph
 * https://github.com/igstan/itake-2015
 * https://crystal-lang.org/2014/12/06/another-language.html
 * http://web.cs.ucla.edu/~palsberg/course/cs239/reading/wand87.pdf
-
-
-
-
-

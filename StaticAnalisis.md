@@ -1,13 +1,13 @@
 # Static Analysis 
 
 * Materialization / Streaming [Wiki](https://en.wikipedia.org/wiki/Random_access)
-* Common sube expression elimination [Wiki](https://en.wikipedia.org/wiki/Common_subexpression_elimination)
+* Common subexpression elimination [Wiki](https://en.wikipedia.org/wiki/Common_subexpression_elimination)
 * Tail Recursive [Wiki](https://en.wikipedia.org/wiki/Tail_call)
-* Frame inlinening
+* Frame inlining
 
 # Materialization / Streaming
 
-Iterator vs Array (Random access vs Sequencial)
+Iterator vs Array (Random access vs Sequential)
 
 # Materialization Rule
 
@@ -23,7 +23,7 @@ It is never materialize in its entire flow
 
 `@StreamCapable`. Fails if it doesn't satisfy our rules
 
-# Common Sube Expression Elmimination
+# Common Subexpression Elmimination
 
 Referencial Transparency
 
