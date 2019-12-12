@@ -13,11 +13,15 @@ Soundness / Completeness
 - String
 - Boolean
 - Number
-- Object
-- Array
 - Dates
 - Regex
 - Namespace
+- Null
+- Object
+- Array
+- Function
+- Any
+- Nothing
 
 # Algebraic Data Types
 
